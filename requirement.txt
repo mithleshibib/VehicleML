@@ -3,4 +3,10 @@ pandas
 matplotlib
 seaborn
 scikit-learn
+bentoml
+requests
+pipreqs
+catboost
+turicreate
+flask
 

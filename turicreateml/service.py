@@ -13,6 +13,46 @@ my_data=tc.SFrame.read_csv('my_data.csv')
 
 predictions = model.predict(my_data)
 print(predictions)
+
+
+from flask import Flask, request, jsonify, render_template
+import turicreate as tc
+
+app = Flask(__name__)
+
+# Load the Turi Create model
+model_path = "Model1_sensor_raw/"
+model = tc.load_model(model_path)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    try:
+        # Get input data from the request
+        data = request.json
+        input_data = tc.SFrame(data['features'])
+
+        # Make predictions using the Turi Create model
+        predictions = model.predict(input_data)
+
+        # Convert the predictions to a list and return as JSON
+        response_data = {'predictions': predictions.tolist()}
+        
+        print('Response:', response_data)  # Log the response data
+        return jsonify(response_data)
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+if __name__ == '__main__':
+    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
+
+
+
 # You can use the loaded model for predictions or further analysis
 # For example, if it's a classifier, you can make predictions on new data
 # predictions = model.predict(new_data)

@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Set the working directory in the container
-WORKDIR /app/turicreateml
+#WORKDIR /app/turicreateml
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --upgrade pip && \

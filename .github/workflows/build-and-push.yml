@@ -49,8 +49,8 @@ jobs:
 
       - name: Tag Docker image
         run: |
-          docker tag my-app:latest AKIAV565HMWWL5ESBBQ4.dkr.ecr.us-east-1.amazonaws.com/my-app:model_sensor_raw
+          docker tag mithml:model_sensor_raw 407948977580.dkr.ecr.us-east-1.amazonaws.com/mithml:model_sensor_raw
 
       - name: Push Docker image to Amazon ECR
         run: |
-          docker push AKIAV565HMWWL5ESBBQ4.dkr.ecr.us-east-1.amazonaws.com/my-app:model_sensor_raw
+          docker push 407948977580.dkr.ecr.us-east-1.amazonaws.com/mithml:model_sensor_raw

@@ -33,12 +33,15 @@ jobs:
           registry-type: private
           skip-logout: false
 
+      - name: Checkout VehicleML branch
+        run: git checkout VehicleML
+
       - name: List workspace contents
         run: ls -l
 
       - name: Build Docker image
         run: |
-          cd /mithleshibib/VehicleML/turicreateml/  # Navigate to the folder containing the Dockerfile
+          cd turicreateml/  # Navigate to the folder containing the Dockerfile
           docker build -t my-app .
 
       - name: Tag Docker image

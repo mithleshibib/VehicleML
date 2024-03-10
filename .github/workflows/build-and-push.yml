@@ -34,7 +34,6 @@ jobs:
           skip-logout: false
 
       - name: Checkout mlproj-vehicle branch
-        run: git branch -a
         run: git checkout mlproj-vehicle
 
       - name: List workspace contents

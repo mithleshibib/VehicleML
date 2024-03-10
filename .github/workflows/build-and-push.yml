@@ -33,8 +33,11 @@ jobs:
           registry-type: private
           skip-logout: false
 
-      - name: Checkout mlproj-vehicle branch
-        run: git checkout mlproj-vehicle
+      - name: Checkout mlproj-vehicle branch from VehicleML repository
+        run: git clone --single-branch --branch mlproj-vehicle https://github.com/mithleshibib/VehicleML.git
+
+      #- name: Checkout mlproj-vehicle branch
+      #  run: git checkout mlproj-vehicle
 
       - name: List workspace contents
         run: ls -l

@@ -33,8 +33,9 @@ jobs:
           registry-type: private
           skip-logout: false
 
-      - name: Checkout VehicleML branch
-        run: git checkout VehicleML
+      - name: Checkout mlproj-vehicle branch
+        run: git branch -a
+        run: git checkout mlproj-vehicle
 
       - name: List workspace contents
         run: ls -l

@@ -33,6 +33,9 @@ jobs:
           registry-type: private
           skip-logout: false
 
+      - name: List workspace contents
+        run: ls -l
+
       - name: Build Docker image
         run: |
           cd turicreateml/  # Navigate to the folder containing the Dockerfile

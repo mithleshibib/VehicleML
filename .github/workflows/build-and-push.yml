@@ -45,7 +45,7 @@ jobs:
       - name: Build Docker image
         run: |
           cd VehicleML/turicreateml/  # Navigate to the folder containing the Dockerfile
-          docker build -t my-app .
+          docker build -t mithml:model_sensor_raw .
 
       - name: Tag Docker image
         run: |

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/VehicleML/mlflow-turicreateml/mlruns/0/dcfcd052e9834c408f97772a9905bb28/artifacts
+end_time: 1710663520228
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dcfcd052e9834c408f97772a9905bb28
+run_name: auspicious-moose-421
+run_uuid: dcfcd052e9834c408f97772a9905bb28
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710663520219
+status: 4
+tags: []
+user_id: ubuntu

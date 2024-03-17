@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+    labels:
+        app: catboost-classifier
+    name: catboost-classifier
+    namespace: vehicleml-ns
+spec:
+    ports:
+    - name: predict
+      port: 5000
+      targetPort: 5000
+    selector:
+      app: catboost-classifier
+    type: NodePort
+#    type: LoadBalancer
+#    externalIPs:
+#    - 3.95.137.48
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    labels:
+        app: catboost-classifier
+    name: catboost-classifier
+    namespace: vehicleml-ns
+spec:
+    selector:
+        matchLabels:
+            app: catboost-classifier
+    replicas: 2
+    template:
+        metadata:
+            labels:
+                app: catboost-classifier
+        spec:
+            containers:
+            - image: mithleshibib/vehicleml:model_sensor_raw
+              imagePullPolicy: IfNotPresent
+              name: catboost-classifier
+              ports:
+              - containerPort: 5000

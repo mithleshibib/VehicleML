@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Predictor</title>
+</head>
+<body>
+    <h1>Model Predictor</h1>
+    <form id="predictionForm">
+        <label for="inputJson">Input JSON:</label>
+        <textarea id="inputJson" name="inputJson" rows="4" cols="50" required></textarea><br>
+
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+
+    <h2>Predictions:</h2>
+    <div id="predictions"></div>
+
+    <script>
+        function predict() {
+            // Get input JSON from the textarea
+            var inputJson = document.getElementById('inputJson').value;
+    
+            // Parse the input JSON
+            try {
+                var payload = JSON.parse(inputJson);
+            } catch (error) {
+                alert('Error parsing JSON: ' + error.message);
+                return;
+            }
+    
+            // Make AJAX request to the Flask endpoint
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Response:', data); // Log the response to the console
+    
+                if (data.predictions !== undefined) {
+                    document.getElementById('predictions').innerText = 'Predictions: ' + JSON.stringify(data.predictions);
+                } else {
+                    document.getElementById('predictions').innerText = 'Error: Unexpected response format';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('predictions').innerText = 'Error: ' + error.message;
+            });
+        }
+    </script>
+</body>
+</html>

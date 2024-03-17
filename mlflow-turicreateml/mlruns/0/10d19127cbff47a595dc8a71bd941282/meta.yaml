@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/VehicleML/mlflow-turicreateml/mlruns/0/10d19127cbff47a595dc8a71bd941282/artifacts
+end_time: 1710676621442
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 10d19127cbff47a595dc8a71bd941282
+run_name: dazzling-hog-542
+run_uuid: 10d19127cbff47a595dc8a71bd941282
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710676621425
+status: 3
+tags: []
+user_id: ubuntu

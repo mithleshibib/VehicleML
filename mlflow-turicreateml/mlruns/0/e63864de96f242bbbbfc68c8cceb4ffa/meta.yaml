@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/VehicleML/mlflow-turicreateml/mlruns/0/e63864de96f242bbbbfc68c8cceb4ffa/artifacts
+end_time: 1710678102282
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e63864de96f242bbbbfc68c8cceb4ffa
+run_name: chill-fowl-376
+run_uuid: e63864de96f242bbbbfc68c8cceb4ffa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710678102267
+status: 3
+tags: []
+user_id: ubuntu

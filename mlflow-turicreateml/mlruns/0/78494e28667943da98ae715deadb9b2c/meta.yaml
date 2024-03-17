@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/VehicleML/mlflow-turicreateml/mlruns/0/78494e28667943da98ae715deadb9b2c/artifacts
+end_time: 1710678296786
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 78494e28667943da98ae715deadb9b2c
+run_name: overjoyed-ant-14
+run_uuid: 78494e28667943da98ae715deadb9b2c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710678296771
+status: 3
+tags: []
+user_id: ubuntu

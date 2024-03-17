@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/VehicleML/mlflow-turicreateml/mlruns/0/fa1143de77ba429a8dc56abfcd9ea16c/artifacts
+end_time: 1710677218426
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fa1143de77ba429a8dc56abfcd9ea16c
+run_name: intrigued-asp-6
+run_uuid: fa1143de77ba429a8dc56abfcd9ea16c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710677218409
+status: 3
+tags: []
+user_id: ubuntu

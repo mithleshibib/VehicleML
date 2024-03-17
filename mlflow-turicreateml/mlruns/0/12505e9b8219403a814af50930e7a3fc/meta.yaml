@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/VehicleML/mlflow-turicreateml/mlruns/0/12505e9b8219403a814af50930e7a3fc/artifacts
+end_time: 1710663440828
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 12505e9b8219403a814af50930e7a3fc
+run_name: enthused-dog-373
+run_uuid: 12505e9b8219403a814af50930e7a3fc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710663440817
+status: 4
+tags: []
+user_id: ubuntu
